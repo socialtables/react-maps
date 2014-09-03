@@ -1,6 +1,4 @@
-/**
- * @jsx React.DOM
- */
+/** @jsx React.DOM */
 "use strict";
 
 var __in_node = (typeof exports !== 'undefined' && this.exports !== exports);
@@ -72,7 +70,7 @@ var Map = React.createClass({
     }
 
     return (
-      <div style={style}></div>
+      React.DOM.div({style:style});
     );
   },
 
