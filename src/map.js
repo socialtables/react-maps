@@ -75,7 +75,7 @@ var Map = React.createClass({
   },
 
   componentDidMount : function() {
-
+      console.log("woot");
       var mapOptions = {
         zoom: this.props.zoom,
         center: new google.maps.LatLng( this.props.latitude , this.props.longitude ),
