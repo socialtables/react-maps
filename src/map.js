@@ -76,8 +76,6 @@ var Map = React.createClass({
 
   componentDidMount : function() {
 
-    window.mapLoaded = (function() {
-
       var mapOptions = {
         zoom: this.props.zoom,
         center: new google.maps.LatLng( this.props.latitude , this.props.longitude ),
@@ -89,11 +87,6 @@ var Map = React.createClass({
       this.setState( { map : map } );
       this.updateMarkers(this.props.points);
 
-    }).bind(this);
-
-    var s =document.createElement('script');
-    s.src = 'https://maps.googleapis.com/maps/api/js?key=' + this.props.gmaps_api_key + '&sensor=' + this.props.gmaps_sensor + '&callback=mapLoaded';
-    document.head.appendChild( s );
 
   },
 
